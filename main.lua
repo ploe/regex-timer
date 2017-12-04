@@ -8,7 +8,6 @@ function love.load()
 	love.window.setMode(1080, 720)
 	love.graphics.setNewFont("digital-7 (mono).ttf", 256)
 	text_color(blue)
-	foghorn = love.audio.newSource("foghorn.wav", 'static')
 end
 
 function text_color(color)
@@ -44,12 +43,12 @@ function love.update(dt)
 
 	seconds = seconds - 1
 
-	if (seconds <= 0) and then
+	if (seconds <= 0) then
 		if (minutes > 0) then 
 			seconds = 59
 			minutes = minutes - 1
-		if (minutes <= 0) then
-			foghorn:play()
+		elseif (minutes <= 0) then
+			i = i + 1
 		end
 	end
 
