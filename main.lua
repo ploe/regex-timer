@@ -1,16 +1,16 @@
-minutes = 02
-seconds = 00
+minutes = 0
+seconds = 0
 label = ""
 
 local i = 1
 local paused = true
+local bruce = love.graphics.newImage("bruce.png")
 
 function love.load()
 	love.window.setMode(1080, 720)
 	love.graphics.setNewFont("digital-7 (mono).ttf", 256)
 
 	love.window.setTitle("Regular Expression")
-	local bruce = love.graphics.newImage("bruce.png")
 	love.window.setIcon(bruce:getData())
 
 	set_timer(states[i])
