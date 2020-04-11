@@ -4,14 +4,14 @@ label = ""
 
 local i = 1
 local paused = true
-local bruce = love.graphics.newImage("bruce.png")
+local bruce = love.image.newImageData("bruce.png")
 
 function love.load()
 	love.window.setMode(1080, 720)
 	love.graphics.setNewFont("digital-7 (mono).ttf", 256)
 
 	love.window.setTitle("Regular Expression")
-	love.window.setIcon(bruce:getData())
+	love.window.setIcon(bruce)
 
 	set_timer(states[i])
 	text_color(states[i])
